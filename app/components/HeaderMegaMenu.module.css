@@ -1,7 +1,7 @@
 .header {
-  height: 60px; /* Assuming 1rem = 16px */
-  padding: 0 100px;
+  padding: 36px 100px;
   width: 100%;
+  background-color: #FDF6EA;
 }
 
 .link {
@@ -16,14 +16,11 @@
   font-size: 14px;
   line-height: 17.85px;
 
-  @media (max-width: 48em) { /* Use actual breakpoint value instead of $mantine-breakpoint-sm */
+  @media (max-width: 48em) { 
     height: 42px;
     width: 100%;
   }
 
-  &:hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-  }
 }
 
 .button{

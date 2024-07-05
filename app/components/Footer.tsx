@@ -7,7 +7,7 @@ const links = [
   { link: '#', label: 'Home' },
   { link: '#', label: 'Features' },
   { link: '#', label: 'FAQs' },
-  { link: '#', label: 'Testimonails' },
+  { link: '#', label: 'Testimonials' },
 ];
 
 export function FooterCentered() {
@@ -28,17 +28,16 @@ export function FooterCentered() {
     <div className={classes.footer}>
       <div className='flex items-center justify-between py-[50px]'>
         <div className='max-w-[50%]'>
-          <h1 className='text-[69px] text-[#FEF08A] leading-[81px] tracking-[-1px] font-[900]'>Get started <span className='text-[#F7F7F7] font-[400]'>with booking your first</span> expert session</h1>
+          <h1 className='text-[69px] text-[#FEF08A] leading-[81px] tracking-[-1px] font-[900]'>Get Started <span className='text-[#F7F7F7] font-[400]'>With Booking Your First</span> Expert Session</h1>
         </div>
         <div className='max-w-[50%]'>
-        <img src="/assets/world.svg" />
+          <img src="/assets/world.svg" alt="World" />
         </div>
       </div>
+      
       <div className={classes.inner}>
         <img src="/assets/logowhite.svg" alt="Logo" />
-
         <Group className={classes.links}>{items}</Group>
-
         <Group gap="xs" justify="flex-end" wrap="nowrap">
           <ActionIcon h="50px" w="50px" color='#FFFFFF1A' radius="xl">
             <IconMail style={{ height: "23px"}} />
@@ -50,10 +49,11 @@ export function FooterCentered() {
             <IconBrandInstagram style={{ height: "22px"}} />
           </ActionIcon>
           <ActionIcon h="50px" w="50px" color='#FFFFFF1A' radius="xl">
-          <svg className='h-[20px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"></path></svg>
+            <svg className='h-[20px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"></path></svg>
           </ActionIcon>
         </Group>
       </div>
+
       <p className='py-[33px] text-center text-[14px] text-[#FFFFFFC2] font-[500] leading-[17.85px]'>© 2023 Logo name Copyrights Reserved</p>
     </div>
   );

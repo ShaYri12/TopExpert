@@ -39,7 +39,7 @@ export function FooterCentered() {
 
         <Group className={classes.links}>{items}</Group>
 
-        <Group gap="xs" justify="flex-end" wrap="nowrap">
+        <Group gap="10px" justify="flex-end" wrap="nowrap">
           <ActionIcon h="50px" w="50px" color='#FFFFFF1A' radius="xl">
             <IconMail style={{ height: "23px"}} />
           </ActionIcon>

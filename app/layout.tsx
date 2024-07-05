@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body>
+      <body className="bg-[#FDF6EA]">
         <MantineProvider>
           <Header/>
           <main className="px-[100px]">{children}</main>

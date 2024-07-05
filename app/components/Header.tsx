@@ -25,9 +25,9 @@ export function HeaderMegaMenu() {
     <Group pos="relative" w="100%" py="30px">
       <header className={classes.header} >
         <Group justify="space-between" h="100%">
-          <img height={"24px"} src="/assets/logo.svg" alt="Logo" />
+          <img height={"24px"} width={"150px"} src="/assets/logo.svg" alt="Logo" />
 
-          <Group  h="100%" gap={"40px"} visibleFrom="sm" py="14px" px="40px" display={"flex"} className='border-[0.5px] border-b-[2px] border-[#000000] rounded-[26px]'>
+          <Group bg={"#FFFFFF"}  h="100%" gap={"40px"} visibleFrom="sm" py="14px" px="40px" display={"flex"} className='border-[0.5px] border-b-[2px] border-[#000000] rounded-[26px]'>
             {menuItems.map((item) => (
               <a key={item.label} href={item.href} className={classes.link}>
                 {item.label}

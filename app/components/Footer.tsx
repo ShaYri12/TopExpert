@@ -36,7 +36,7 @@ export function FooterCentered() {
       </div>
       
       <div className={classes.inner}>
-        <img src="/assets/logowhite.svg" alt="Logo" />
+        <img height={"24px"} width={"150px"} src="/assets/logowhite.svg" alt="Logo" />
         <Group className={classes.links}>{items}</Group>
 
         <Group gap="10px" justify="flex-end" wrap="nowrap">

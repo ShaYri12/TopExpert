@@ -2,7 +2,7 @@
       padding: 0 100px;
       margin-top: rem(120px);
       border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
-      background-color: #1E1E1E;
+      background-color: #1E1E1E !important;
     }
     
     .inner {

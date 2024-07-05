@@ -1,33 +1,34 @@
-'use client'
-import React from 'react';
-import {
-  Group,
-  Button,
-  Burger,
-  Drawer,
-  ScrollArea,
-  rem,
-} from '@mantine/core';
-import classes from './HeaderMegaMenu.module.css';
-import { useDisclosure } from '@mantine/hooks';
+"use client";
+import React from "react";
+import { Group, Button, Burger, Drawer, ScrollArea, rem } from "@mantine/core";
+import classes from "./HeaderMegaMenu.module.css";
+import { useDisclosure } from "@mantine/hooks";
 
 const menuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'For Creators', href: '#' },
-  { label: 'About Us', href: '#' },
-  { label: 'Testimonials', href: '#' },
+  { label: "Home", href: "/" },
+  { label: "For Creators", href: "#" },
+  { label: "About Us", href: "#" },
+  { label: "Testimonials", href: "#" },
 ];
 
 export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <Group pos="relative" w="100%" py="30px">
-      <header className={classes.header} >
+    <Group pos="relative" w="100%">
+      <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <img height={"24px"} src="/assets/logo.svg" alt="Logo" />
 
-          <Group  h="100%" gap={"40px"} visibleFrom="sm" py="14px" px="40px" display={"flex"} className='border-[0.5px] border-b-[2px] border-[#000000] rounded-[26px]'>
+          <Group
+            h="100%"
+            gap={"40px"}
+            visibleFrom="sm"
+            py="14px"
+            px="40px"
+            display={"flex"}
+            className="border-[0.5px] border-b-[2px] border-[#000000] rounded-[26px]"
+          >
             {menuItems.map((item) => (
               <a key={item.label} href={item.href} className={classes.link}>
                 {item.label}
@@ -36,8 +37,16 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm" h="100%">
-            <Button variant="default" radius={"35px"} className={classes.button} >Log in</Button>
-            <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>Sign up</Button>
+            <Button
+              variant="default"
+              radius={"35px"}
+              className={classes.button}
+            >
+              Log in
+            </Button>
+            <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
+              Sign up
+            </Button>
           </Group>
 
           <Burger opened={isOpen} onClick={toggle} hiddenFrom="sm" />
@@ -61,9 +70,17 @@ export function HeaderMegaMenu() {
               </a>
             ))}
 
-            <Group justify="center" className='flex flex-col'>
-              <Button variant="default" radius={"35px"} className={classes.button} >Log in</Button>
-              <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>Sign up</Button>
+            <Group justify="center" className="flex flex-col">
+              <Button
+                variant="default"
+                radius={"35px"}
+                className={classes.button}
+              >
+                Log in
+              </Button>
+              <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
+                Sign up
+              </Button>
             </Group>
           </Group>
         </ScrollArea>

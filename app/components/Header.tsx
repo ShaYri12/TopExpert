@@ -61,9 +61,9 @@ export function HeaderMegaMenu() {
               </a>
             ))}
 
-            <Group justify="center">
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+            <Group justify="center" className='flex flex-col'>
+              <Button variant="default" radius={"35px"} className={classes.button} >Log in</Button>
+              <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>Sign up</Button>
             </Group>
           </Group>
         </ScrollArea>

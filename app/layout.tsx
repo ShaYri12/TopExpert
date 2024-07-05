@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <MantineProvider>
           <Header/>
-          <main>{children}</main>
+          <main className="px-[100px]">{children}</main>
           <Footer/>
         </MantineProvider>
       </body>

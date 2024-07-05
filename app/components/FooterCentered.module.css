@@ -22,16 +22,19 @@
     }
     .links {
       background-color: #FFFFFF1A ;
-      height: 50px;
-      color: #F1F5F9; 
+      height: 50px; 
       display: flex;
       align-items: center;
       padding: 15px 38px;
       text-decoration: none;
+      gap: 36px !important;
+      border-radius: 39.5px;
+    }
+
+    .links a{
+      color: #F1F5F9 !important;
       font-weight: 500;
       font-size: 14px;
       line-height: 17.85px;
-      gap: 36px !important;
-      border-radius: 39.5px;
     }
     

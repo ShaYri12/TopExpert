@@ -1,13 +1,11 @@
 'use client'
 import { useState } from 'react';
-import { Group} from '@mantine/core';
+import { Button, Group, Text} from '@mantine/core';
 import {
   IconBellRinging,
   IconFingerprint,
   IconKey,
   IconReceipt2,
-  IconSwitchHorizontal,
-  IconLogout,
 } from '@tabler/icons-react';
 import classes from './Sidebar.module.css';
 
@@ -81,15 +79,10 @@ export function Sidebar() {
       </div>
 
       <div className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </a>
-
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a>
+        <img src="/assets/jamesbond.svg" />
+        <Text>James Bond</Text>
+        <Text>Jamesbond007@gmail.com</Text>
+        <Button>Logout</Button>
       </div>
     </nav>
   );

@@ -10,6 +10,7 @@ import {
   Card,
   Image,
   Text,
+  Select,
 } from "@mantine/core";
 import { MdArrowBack, MdOutlineCalendarMonth } from "react-icons/md";
 import { Tabs } from "@mantine/core";
@@ -282,6 +283,84 @@ const Page = () => {
             </div>
           </Tabs.Panel>
         </Tabs>
+      </div>
+
+      <div
+        className={`bg-white max-h-[500px] flex flex-col justify-between border w-[40%] border-black p-[2%] ${classes.card}`}
+      >
+        <h2 className="text-[20px] font-[700] ">Booking</h2>
+
+        <div className="space-y-[12px]">
+          <p className="text-[14px] font-[600]">Pick a date</p>
+          <div className="flex items-center gap-[10px]">
+            <Button
+              variant="default"
+              radius={"35px"}
+              bg={"#FED7AA"}
+              className={classes.button}
+            >
+              Sun, 11 Feb, 2024
+            </Button>
+            <Button
+              variant="default"
+              radius={"35px"}
+              className={classes.simpleButton}
+            >
+              Sun, 11 Feb, 2024
+            </Button>
+          </div>
+        </div>
+
+        <div className="space-y-[12px]">
+          <p className="text-[14px] font-[600]">Pick a time</p>
+          <div className="flex items-center gap-[10px]">
+            <Button
+              variant="default"
+              radius={"35px"}
+              bg={"#FED7AA"}
+              className={classes.button}
+            >
+              01:00 AM
+            </Button>
+            <Button
+              variant="default"
+              radius={"35px"}
+              className={classes.simpleButton}
+            >
+              01:30 AM
+            </Button>
+            <Button
+              variant="default"
+              radius={"35px"}
+              className={classes.simpleButton}
+            >
+              02:00 AM
+            </Button>
+          </div>
+        </div>
+
+        <div className="space-y-[12px]">
+          <p className="text-[14px] font-[600]">Time Zone</p>
+          <Select
+            className={"border border-black"}
+            placeholder="(GMT+5:00)Islamabad, Karachi, Tashkent (PKT)"
+            data={[
+              "(GMT+5:00)Islamabad, Karachi, Tashkent (PKT)",
+              "(GMT+5:00)Islamabad, Karachi, Tashkent (IST)",
+              "(GMT+5:00)Islamabad, Karachi, Tashkent (BGT)",
+              "(GMT+5:00)Islamabad, Karachi, Tashkent (KUP)",
+            ]}
+          />
+        </div>
+
+        <div className="flex items-center justify-center gap-[10px]">
+          <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
+            Confirms Details
+          </Button>
+          <Button variant="default" radius={"35px"} className={classes.button}>
+            Subscribe for <span className="font-[800]"> $37/mo</span>
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -5,18 +5,11 @@ import Seller from './Seller';
 import Reviews from './Reviews'
 import classes from './DesktopSix.module.css'
 
-const links = [
-  { link: '#', label: '📧', icon: IconMail },
-  { link: '#', label: '📘', icon: IconBrandFacebook },
-  { link: '#', label: '📸', icon: IconBrandInstagram },
-  { link: '#', label: '🎵', icon: IconBrandTiktok },
-];
-
 const DesktopSix = () => {
   return (
     <div className="px-[100px] pb-[100px]">
       <div className="mt-[-30px]">
-        <Button variant="default" radius="xl" className={classes.button}>
+        <Button variant="default" radius="40px" className={classes.button}>
           <IconArrowLeft width="15px" stroke="3px" /> Luna Data Scientist
         </Button>
       </div> 

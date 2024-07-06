@@ -16,7 +16,7 @@ export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <Group pos="relative" w="100%">
+    <Group pos="relative" w="100%" >
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href="/">

@@ -15,7 +15,7 @@ export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <Group pos="relative" w="100%">
+    <Group pos="relative" w="100%" >
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <img height={"24px"} width={"150px"} src="/assets/logo.svg" alt="Logo" />

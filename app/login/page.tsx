@@ -1,128 +1,61 @@
 import React from "react";
 import { Button } from "@mantine/core";
 import classes from "@/app/components/HeaderMegaMenu.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
-const page = () => {
+const Login = () => {
   return (
-    <div className="sticky top-0">
-      <div className="flex h-[900px] w-screen gap-3 overflow-hidden">
-        <div className="h-[900px] min-w-[30%] grid gap-3 grid-rows-2">
-          <div className="w-full h-[500px] overflow-hidden">
-            <img
-              src="/assets/login1.jpeg"
-              className="h-full w-full object-cover"
-            />
-          </div>
+    <div className="bg-[#1A1E28]">
 
-          <div className="w-full max-h-[450px] overflow-hidden">
-            <img
-              src="/assets/login4.jpeg"
-              className="h-full w-full object-cover"
-            />
-          </div>
+    <div className="w-full  mx-auto max-w-[1440px]">
+      <div className="flex w-full gap-[0.8rem] relative">
+          <div className="absolute inset-0 h-[200px] bg-custom-gradient1"></div>
+
+        <div className="flex flex-col gap-2.5">
+          <Image src='assets/login1.svg' alt="Image" width={404} height={457} />
+          <Image src='assets/login4.svg' alt="Image" width={404} height={456} />
         </div>
 
-        <div className="h-[900px] w-full grid gap-3 grid-rows-[34%_66%]">
-          <div className="w-full  overflow-hidden">
-            <img
-              src="/assets/login2.jpeg"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="flex flex-col gap-2.5">
+            <Image src="/assets/login2.svg" alt="Image" width={609} height={301}/>
+             <div className="bg-white w-full py-10 flex items-center flex-col justify-center text-center">
+                <h2 className="capitalize max-w-[390px] font-black text-[34px] leading-[43px] text-[#1A1E28]">No task too big, no skill too <span className="font-medium">small</span>, Find your <span className="font-medium">perfect</span> pro</h2>
+                <h4 className="text-[#1A1E28] text-[16px] leading-[20px] capitalize font-normal mt-5">Let's <span className="font-bold border-b-2 border-[#F97316] pb-1">Hire</span> someone</h4>
 
-          <div className="py-[8%] w-full h-full flex flex-col justify-center items-center bg-white text-center max-h-[600px] overflow-hidden">
-            <div>
-              <h1 className="text-[34px] font-bold px-[15%] py-8">
-                No task too big, no skill too{" "}
-                <span className="font-normal">small</span>, Find your{" "}
-                <span className="font-normal">perfect</span> pro
-              </h1>
-              <p className="text-[16px] leading-[21px]">
-                Let's <span className="font-bold">Hire</span> someone
-              </p>
-            </div>
-            <div className="space-y-3 py-10 flex flex-col">
-              <div>
-                <Button
-                  variant="default"
-                  radius={"35px"}
-                  className={classes.button}
-                >
-                  Continue with Google
-                </Button>
-              </div>
-              <div>
-                <Button
-                  variant="default"
-                  radius={"35px"}
-                  className={classes.button}
-                >
-                  Continue with Facebook
-                </Button>
-              </div>
-              <div>
-                <Button
-                  variant="default"
-                  radius={"35px"}
-                  className={classes.button}
-                >
-                  Continue with Email
-                </Button>
-              </div>
-            </div>
+                <div className="mt-9 mb-16 flex flex-col gap-2.5">
+                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                    <Image src='/assets/login-google.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Google </span>
+                  </button>
+                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                    <Image src='/assets/login-facebook.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Facebook </span>
+                  </button>
+                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                    <Image src='/assets/login-sms.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Email </span>
+                  </button>
+                </div>
 
-            <div>
-              <p className="text-[14px] text-slate-400 leading-[20px] px-[15%]">
-                By signing up you agree to LOGO Terms of Service and Privacy
-                Policy. You'll get updates at your email.
-              </p>
-              <p className="text-[14px] text-slate-400 leading-[20px] px-[15%]">
-                Already have an account?
-                <span className="cursor-pointer text-orange-500">Log in</span>
-              </p>
-            </div>
-          </div>
+                <p className="text-[#334155] text-[14px] leading-[20px] tracking-[-0.02em] font-normal max-w-[366px]">By signing up you agree to LOGO Terms of Service and Privacy Policy. You'll get updates at your email.</p>
+                <h2 className="text-[#334155] text-[14px] leading-[20px] tracking-[-0.02em] mt-4">Already have an account? <Link href='/login' className="text-[#F97316] font-bold">Log in</Link></h2>
+             </div>
         </div>
 
-        <div className="h-[900px] min-w-[30%] grid gap-3 grid-rows-[34%_66%]">
-          <div className="w-full overflow-hidden">
-            <img
-              src="/assets/login3.jpeg"
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          <div className="w-full overflow-hidden">
-            <img
-              src="/assets/login5.jpeg"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="flex items-center flex-col gap-2.5">
+          <Image src="/assets/login3.svg" alt="Image" width={404} height={301}/>
+          <Image src="/assets/login5.svg" alt="Image" width={404} height={613}/>
         </div>
       </div>
 
-      <div className="flex gap-3 mt-3 h-[300px]">
-        <div className="min-w-[30%] h-full overflow-hidden">
-          <img
-            src="/assets/login6.jpeg"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="min-w-[30%] h-full overflow-hidden">
-          <img
-            src="/assets/login7.jpeg"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="w-full h-full overflow-hidden">
-          <img
-            src="/assets/login8.jpeg"
-            className="h-full w-full object-cover"
-          />
-        </div>
+      <div className="flex items-center gap-2.5 mt-2.5 relative">
+          <div className="absolute inset-0 top-8 bg-custom-gradient"></div>
+          <Image src="/assets/login6.svg" alt="Image" width={405} height={303}/>
+          <Image src="/assets/login7.svg" alt="Image" width={405} height={303}/>
+          <Image src="/assets/login8.svg" alt="Image" width={611} height={303}/>
       </div>
+    </div>
+    
     </div>
   );
 };
 
-export default page;
+export default Login;

@@ -65,13 +65,13 @@ export function Sidebar() {
           <img width={"137px"} height={"32px"} src="/assets/logo.svg" />
         </Group>
         <div className='flex flex-col gap-[14px] mt-[59px]'>
-            Main Menu
+            <Text px={19}>Main Menu</Text>
             <div>
                 {links1}
             </div>
         </div>
         <div className='flex flex-col gap-[14px] mt-[59px]'>
-            Main Menu
+        <Text px={19}>Main Menu</Text>
             <div>
                 {links2}
             </div>

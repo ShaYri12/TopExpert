@@ -10,6 +10,7 @@
   
   .navbarMain {
     flex: 1;
+    padding-left: 19px;
   }
   
   .header {

@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderWidth:{
+        borderCustom: '1px 1px 4px 1px',
+        borderCustom1: '1px 1px 2px 1px'
+      }
     },
   },
   plugins: [],

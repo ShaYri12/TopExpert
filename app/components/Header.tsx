@@ -24,6 +24,7 @@ export function HeaderMegaMenu() {
             h="100%"
             gap={"40px"}
             visibleFrom="sm"
+            bg={'#FFFFFF'}
             py="14px"
             px="40px"
             display={"flex"}

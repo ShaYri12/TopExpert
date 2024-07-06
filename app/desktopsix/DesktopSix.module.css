@@ -1,18 +1,35 @@
-.button{
-    display: flex;
-    border-bottom: 3px solid #1E1E1E !important;
-    padding: 10px !important;
-    height: 44px !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-    line-height: 17.85px !important;
-    border: 1px solid #28231A !important;
-    background-color: #FDF6EA;
-    gap: 6px !important;
-    box-shadow: -2px 4px 0px 0px #28231A;
-  }
+.button {
+  display: flex;
+  border-bottom: 3px solid #1E1E1E !important;
+  padding: 10px !important;
+  height: 44px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 17.85px !important;
+  border: 1px solid #28231A !important;
+  background-color: #FDF6EA;
+  gap: 6px !important;
+  box-shadow: -2px 4px 0px 0px #28231A;
+}
 
-  .button span span{
-    display: flex;
-    gap: 6px !important;
-  }
+.button span span {
+  display: flex;
+  gap: 6px !important;
+}
+
+.button2 {
+  border: none;
+  background: transparent !important;
+  padding: 0;
+  gap: 10px;
+  border-radius: 0 !important;
+}
+
+.activeBtn {
+  border-bottom: 3px solid #F97316 !important; 
+  border-radius: 0 !important;
+}
+
+.button2 span span {
+  padding: 13px 30px 13px 30px;
+}

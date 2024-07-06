@@ -1,7 +1,8 @@
-'use client'
-import React from 'react'
-import { Button, Card, Image, Text, Badge, Stack, ActionIcon, Group, Flex } from '@mantine/core'
-import { IconArrowLeft, IconMail, IconBrandFacebook, IconBrandInstagram, IconBrandTiktok, IconStarFilled } from '@tabler/icons-react'
+import React from 'react';
+import { Button, Card } from '@mantine/core';
+import { IconArrowLeft, IconMail, IconBrandFacebook, IconBrandInstagram, IconBrandTiktok, IconArrowRight } from '@tabler/icons-react';
+import Seller from './Seller';
+import Reviews from './Reviews'
 import classes from './DesktopSix.module.css'
 
 const links = [
@@ -13,160 +14,51 @@ const links = [
 
 const DesktopSix = () => {
   return (
-    <div>
+    <div className="px-[100px] pb-[100px]">
       <div className="mt-[-30px]">
         <Button variant="default" radius="xl" className={classes.button}>
           <IconArrowLeft width="15px" stroke="3px" /> Luna Data Scientist
         </Button>
-      </div>
-      <div className="mt-[22px] flex flex-row bg-[#FED7AA] p-[10px] shadow-custom-black">
-        <Card
-          px="16px"
-          py="20px"
-          bg="#FDF6EA"
-          className="w-[40%] md:w-1/3 flex flex-col gap-[10px] md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4"
-        >
-          <div className="flex w-[100%] items-start justify-between">
-            <img
-              width={"137px"}
-              src="/assets/jamesbond.svg"
-              alt="Profile picture of James Bond"
-              className="rounded-full"
-            />
-            <div
-              className="text=[12px] text-[#FFFFFF] border border-[#1E1E1E] font-[700] leading-[15.3px] flex gap-[5px] px-[10px] py-[6px] bg-[#10B981] rounded-[40px]"
-              style={{ boxShadow: "-1px 2px 0px 0px #000000" }}
-            >
-              Verified <img src="/assets/verify.svg" alt="verify" />
-            </div>
-          </div>
-          <div className="flex flex-col items-center md:items-start space-y-2">
-            <Text fw={700} fz="20px" lh={"25.5px"}>
-              James Bond
-            </Text>
-            <Text color="#1E1E1E" fw={400} fz="16px" lh={"20.4px"}>
-              I Broke Into Data With A Non-Technical Background. Let Me Help You
-              Do The Same.
-            </Text>
-            <Group gap="10px" justify="flex-end" wrap="nowrap">
-              <ActionIcon
-                h="50px"
-                w="50px"
-                bg="#FFFFFF"
-                color="#1E1E1E"
-                radius="xl"
-              >
-                <IconMail style={{ height: "23px", color: "#000000" }} />
-              </ActionIcon>
-              <ActionIcon
-                h="50px"
-                w="50px"
-                bg="#FFFFFF"
-                color="#1E1E1E"
-                radius="xl"
-              >
-                <svg
-                  className="h-[18px] text-[#000000]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47062 14 5.5 16 5.5H17.5V2.1401C17.1743 2.09685 15.943 2 14.6429 2C11.9284 2 10 3.65686 10 6.69971V9.5H7V13.5H10V22H14V13.5Z"></path>
-                </svg>
-              </ActionIcon>
-              <ActionIcon
-                h="50px"
-                w="50px"
-                bg="#FFFFFF"
-                color="#1E1E1E"
-                radius="xl"
-              >
-                <IconBrandInstagram
-                  style={{ height: "22px", color: "#000000" }}
-                />
-              </ActionIcon>
-              <ActionIcon
-                h="50px"
-                w="50px"
-                bg="#FFFFFF"
-                color="#1E1E1E"
-                radius="xl"
-              >
-                <svg
-                  className="h-[20px] text-[#000000]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"></path>
-                </svg>
-              </ActionIcon>
-            </Group>
-          </div>
-        </Card>
+      </div> 
+      <Seller />
+      <div className="shadow-custom-black border border-[#000000] bg-[#FFFCF8] mt-[21px] py-[16px] px-[19px]">
+        <div className="flex w-fit border-b border-[#E2E8F0]">
+          <Button variant='default' className={`${classes.button2} ${classes.activeBtn}`}>All</Button>
+          <Button variant='default' className={classes.button2}>1:1 Call</Button>
+          <Button variant='default' className={classes.button2}>Package</Button>
+        </div>
 
-        <Card bg="transparent" padding="lg" className="flex flex-col items-center gap-[30px] w-[60%] md:w-2/3">
-          <div className="flex justify-between mb-6">
-            <div className="flex gap-[18px]">
-              <div className="space-y-[6px] rounded-[3px] px-[26px] py-[11px] bg-[#FFF0DB] border border-[#B78F61] border-b-[2px] border-l-[2px]">
-                <Text fw={400} fz="12px" lh={"15.3px"}>
-                  TOP
-                </Text>
-                <Text fz="25px" fw={700} lh={"31.87px"}>
-                  10%
-                </Text>
-              </div>
-              <div className="space-y-[6px] rounded-[3px] px-[26px] py-[11px] bg-[#FFF0DB] border border-[#B78F61] border-b-[2px] border-l-[2px]">
-                <Text fw={400} fz="12px" lh={"15.3px"}>
-                  BOOKING
-                </Text>
-                <Text fz="25px" fw={700} lh={"31.87px"}>
-                  93
-                </Text>
-              </div>
-              <div className="flex items-center bg-white p-[2px]">
-                <Text
-                  className="h-[100%] w-[220px] flex items-center bg-[#EEB4A2]"
-                >
-                  <img
-                    className="bg-[#FEE9E2] p-[15px] h-full object-contain"
-                    src="/assets/star.svg"
-                    alt="star"
-                  />{" "}
-                  <p className="flex flex-col p-[15px] fw-[700] text-[20px] leading-[25.5px]">
-                    TOP RATED
-                    <span className="fw-[400] text-[12px] leading-[15.3px]">
-                      DATA
-                    </span>
-                  </p>
-                </Text>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+          {[...Array(5)].map((_, index) => (
+            <div key={index}>
+              <Card bg={"#FFFBF5"} px="20px" py="16px" className="border border-[#000000] flex flex-col gap-[26px]" style={{ boxShadow: "-2px 4px 0px 0px #28231A" }}>
+                <div className='flex flex-col gap-[11px]'>
+                  <span className="w-fit bg-[#E0F2FE] border border-[#075985] text-[#0284C7] p-[10px] font-[700] rounded-[40px] text-[12px] leading-[15.3px]">Popular</span>
+                  <div className='flex flex-col gap-[5px]'>
+                    <h2 className="text-[18px] font-[700] leading-[22.95px] text-[#000000]">Career Guidance (30 Mins)</h2>
+                    <p className="text-[14px] font-[400] leading-[17.85px] text-[#000000]">Direction for the data job hunt</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between bg-[#F9EDD9] rounded-[6px] p-[7px]">
+                  <div className="flex items-center gap-[9px]">
+                    <div className='bg-[#FFFFFF] rounded-[7px] p-[9px]'>
+                      <img src="/assets/calendar.svg" alt="calendar" width={"25.29px"} height={"24.45px"} />
+                    </div>
+                    <div>
+                      <p className="text-[14px] font-[700] leading-[17.85px]">30 Mins</p>
+                      <p className="text-[14px] font-[400] leading-[17.85px]">Video Meeting</p>
+                    </div>
+                  </div>
+                  <Button variant="default" bg={"#FDF6EA"} radius="30px" bd={"1px solid #000000"} className='flex gap-[4px] font-[700] text-[14px] leading-[17.85px] items-center justify-center py-[7px] px-[10px]'>$55 <IconArrowRight width="15px" stroke="3px" /></Button>
+                </div>
+              </Card>
             </div>
-            <Text display={"Flex"} fz="lg" fw={500} className="flex items-center p-[10px] border border-[#000000] rounded-[36px] gap-[6px]">
-              <IconStarFilled color='#FB923C'/> 5/5 (5)
-            </Text>
-          </div>
-
-          <div className='flex flex-col gap-[10px]'>
-            <Text fw={700} fz="18px" lh={"22.95px"}>
-              About Seller
-            </Text>
-            <Text fw={400} fz='16px' lh={"24px"}>
-              From education, to sales, to operations, and eventually to data.
-              Through my career highs and lows I've learned how to frame
-              non-conventional backgrounds and identify transferable skills
-              necessary to make the pivot.
-            </Text>
-            <Text fw={400} fz='16px' lh={"24px"}>
-              I've worked as both a Business Analyst and a Data Analyst and love
-              the work that I do. Let's work together to get you to the next stage
-              in your career!
-            </Text>
-          </div>
-        </Card>
+          ))}
+        </div>
+      <Reviews />
       </div>
     </div>
   );
 }
 
-export default DesktopSix
+export default DesktopSix;

@@ -4,7 +4,7 @@ import classes from "@/app/components/HeaderMegaMenu.module.css";
 
 const page = () => {
   return (
-    <div className="relative">
+    <div className="sticky top-0">
       <div className="flex h-[900px] w-screen gap-3 overflow-hidden">
         <div className="h-[900px] min-w-[30%] grid gap-3 grid-rows-2">
           <div className="w-full h-[500px] overflow-hidden">

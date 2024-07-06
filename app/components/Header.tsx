@@ -3,6 +3,7 @@ import React from "react";
 import { Group, Button, Burger, Drawer, ScrollArea, rem } from "@mantine/core";
 import classes from "./HeaderMegaMenu.module.css";
 import { useDisclosure } from "@mantine/hooks";
+import Link from "next/link";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -18,13 +19,20 @@ export function HeaderMegaMenu() {
     <Group pos="relative" w="100%">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <img height={"24px"} width={"150px"} src="/assets/logo.svg" alt="Logo" />
+          <Link href="/">
+            <img
+              height={"24px"}
+              width={"150px"}
+              src="/assets/logo.svg"
+              alt="Logo"
+            />
+          </Link>
 
           <Group
             h="100%"
             gap={"40px"}
             visibleFrom="sm"
-            bg={'#FFFFFF'}
+            bg={"#FFFFFF"}
             py="14px"
             px="40px"
             display={"flex"}
@@ -38,16 +46,20 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm" h="100%">
-            <Button
-              variant="default"
-              radius={"35px"}
-              className={classes.button}
-            >
-              Log in
-            </Button>
-            <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
-              Sign up
-            </Button>
+            <Link href="/login">
+              <Button
+                variant="default"
+                radius={"35px"}
+                className={classes.button}
+              >
+                Log in
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
+                Sign up
+              </Button>
+            </Link>
           </Group>
 
           <Burger opened={isOpen} onClick={toggle} hiddenFrom="sm" />

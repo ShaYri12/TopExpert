@@ -2,27 +2,10 @@
 import { useState } from 'react';
 import { Avatar, Button, Group, Text } from '@mantine/core';
 import {
-  IconBellRinging,
-  IconBook,
-  IconBook2,
-  IconCalendar,
-  IconFile,
-  IconFile3d,
-  IconFileBarcode,
-  IconFileCertificate,
-  IconFileDots,
-  IconFileFilled,
-  IconFileInfo,
-  IconFingerprint,
   IconHeart,
   IconHome2,
-  IconKey,
   IconMessage2,
   IconPhoneCall,
-  IconPlaceholder,
-  IconReceipt2,
-  IconServicemark,
-  IconUser,
 } from '@tabler/icons-react';
 import classes from './Sidebar.module.css';
 

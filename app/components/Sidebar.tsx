@@ -64,14 +64,14 @@ export function Sidebar() {
         <Group className={classes.header} justify="space-between">
           <img width={"137px"} height={"32px"} src="/assets/logo.svg" />
         </Group>
-        <div className='flex flex-col gap-[14px] mt-[59px]'>
-            <Text px={19}>Main Menu</Text>
+        <div className='flex flex-col gap-[14px]'>
+            <Text px={11}>Main Menu</Text>
             <div>
                 {links1}
             </div>
         </div>
-        <div className='flex flex-col gap-[14px] mt-[59px]'>
-        <Text px={19}>Main Menu</Text>
+        <div className='flex flex-col gap-[14px]'>
+        <Text px={11}>Main Menu</Text>
             <div>
                 {links2}
             </div>

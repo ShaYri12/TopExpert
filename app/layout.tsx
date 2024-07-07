@@ -23,9 +23,9 @@ export default function RootLayout({
       </head>
       <body className="bg-[#FDF6EA]">
         <MantineProvider>
-          <Header />
+          {/* <Header /> */}
           <main className="">{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </MantineProvider>
       </body>
     </html>

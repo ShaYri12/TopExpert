@@ -1,6 +1,7 @@
 import React from "react";
 import { Sidebar } from "../components/Sidebar";
 import classes from "../components/HeaderMegaMenu.module.css";
+import DashboardTopbar from "../components/DashboardTopbar";
 
 interface CardProps {
   imgSrc: string;
@@ -22,39 +23,41 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, description }) => {
 
 const DesktopSeven: React.FC = () => {
   return (
-    <div className="flex w-full overflow-hidden gap-5">
+    <div className="flex w-full overflow-hidden">
       <Sidebar />
+      <div className="w-full bg-[#FDF6EA]">
+        <DashboardTopbar />
+        <div className="flex-1 m-4">
+          <div className="w-full p-7 border bg-white border-black">
+            <p className="font-bold text-[18px]">Settings</p>
+            <p className="font-bold text-[16px] text-gray-500">
+              Usman Zafar,{" "}
+              <span className="font-normal">usmanzafar089@gmail.com</span>
+            </p>
+          </div>
 
-      <div className="flex-1 mr-4">
-        <div className="w-full p-7 border bg-white border-black">
-          <p className="font-bold text-[18px]">Settings</p>
-          <p className="font-bold text-[16px] text-gray-500">
-            Usman Zafar,{" "}
-            <span className="font-normal">usmanzafar089@gmail.com</span>
-          </p>
-        </div>
-
-        <div className="grid grid-cols-3 py-5 gap-5">
-          <Card
-            imgSrc="/assets/PersonalInfo.svg"
-            title="Personal Info"
-            description="Provide personal details and how we can reach you"
-          />
-          <Card
-            imgSrc="/assets/safety.svg"
-            title="Privacy and sharing"
-            description="Manage your personal data, connected services, and data sharing settings"
-          />
-          <Card
-            imgSrc="/assets/security.svg"
-            title="Login & Security"
-            description="Update your password and secure your account"
-          />
-          <Card
-            imgSrc="/assets/Billing.svg"
-            title="Billing"
-            description="Manage billing, view invoices, and change your plan."
-          />
+          <div className="grid grid-cols-3 py-5 gap-5">
+            <Card
+              imgSrc="/assets/PersonalInfo.svg"
+              title="Personal Info"
+              description="Provide personal details and how we can reach you"
+            />
+            <Card
+              imgSrc="/assets/safety.svg"
+              title="Privacy and sharing"
+              description="Manage your personal data, connected services, and data sharing settings"
+            />
+            <Card
+              imgSrc="/assets/security.svg"
+              title="Login & Security"
+              description="Update your password and secure your account"
+            />
+            <Card
+              imgSrc="/assets/Billing.svg"
+              title="Billing"
+              description="Manage billing, view invoices, and change your plan."
+            />
+          </div>
         </div>
       </div>
     </div>

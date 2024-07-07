@@ -57,8 +57,18 @@ export function FooterCentered() {
       </div>
 
       <div className={classes.inner}>
-        <img height={"24px"} width={"150px"} src="/assets/logowhite.svg" alt="Logo" />
-        <Group className={classes.links}>{items}</Group>
+        <img
+          height={"24px"}
+          width={"150px"}
+          src="/assets/logowhite.svg"
+          alt="Logo"
+        />
+        <div className="flex flex-col items-center justify-center">
+          <Group className={classes.links}>{items}</Group>
+          <p className="py-[33px] text-center text-[14px] text-[#FFFFFFC2] font-[500] leading-[17.85px]">
+            © 2023 Logo name Copyrights Reserved
+          </p>
+        </div>
 
         <Group gap="10px" justify="flex-end" wrap="nowrap">
           <ActionIcon h="50px" w="50px" color="#FFFFFF1A" radius="xl">
@@ -89,10 +99,6 @@ export function FooterCentered() {
           </ActionIcon>
         </Group>
       </div>
-
-      <p className="py-[33px] text-center text-[14px] text-[#FFFFFFC2] font-[500] leading-[17.85px]">
-        © 2023 Logo name Copyrights Reserved
-      </p>
     </div>
   );
 }

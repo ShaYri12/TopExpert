@@ -11,6 +11,7 @@ import {
   Checkbox,
   Flex,
   Image,
+  Center,
 } from "@mantine/core";
 import classes from "./DesktopEight.module.css";
 import { IconArrowLeft} from "@tabler/icons-react";
@@ -30,7 +31,7 @@ const DesktopEight = () => {
     };
     
   return (
-    <Box mb="100px" mt="30px">
+    <Box mb="60px" mt="30px" px={20}>
       <div className="shadow-custom-black max-w-lg mx-auto">
         <Card
           padding="0px"
@@ -64,11 +65,11 @@ const DesktopEight = () => {
             className="border-b-[1px] flex flex-col gap-[23px] border-[#E4E4E7]"
           >
             <div className="flex flex-col gap-[23px]">
-                <Flex justify={"space-between"} gap={7}>
-                <Box className="flex flex-col gap-[7px]">
-                    <Title size="20px" fw={800} lh="25.5px">
+                <Flex justify={"space-between"} align={"center"} gap={7}>
+                <Box className="flex flex-col gap-[7px]" >
+                    <h3 className="md:text-[20px] text-[16px] font-[700] md:leading-[25.5px] leading-[20.4px]">
                     Career Guidance (30 Mins)
-                    </Title>
+                    </h3>
                     <Text color="#71717A" size="14px" fw={400} lh={"17.85px"}>Video Meeting • 30 Mins</Text>
                 </Box>
                 <Flex justify="space-between" align="center" bg={"#FDF6EA"} gap={4} px={13} py={10} bd={"1px solid #28231A"} className="rounded-[30px]">
@@ -86,34 +87,34 @@ const DesktopEight = () => {
                 className="border border-[#000000] border-b-[4px]"
               >
                 <Flex justify="space-between" align="center">
-                  <Group gap={9}>
+                  <div className="flex gap-[9px]">
                     <img width={"21px"} height={"21px"} src="/assets/calendar2.svg" />
                     <Text size="14px" fw={600} lh={"17.85px"}>Fri, 2 Feb • 1:30 AM - 2:00 AM <span className="font-[400]">(GMT +05:00)</span></Text>
-                  </Group>
+                  </div>
                   <img width={"19px"} height={"19px"} src="/assets/edit.svg" />
                 </Flex>
               </Card>
               </div>
             <div className="flex flex-col gap-[19px]">
-              <Box className="flex flex-col gap-[14px]">
+              <Box className="flex flex-col md:gap-[14px] gap-[12px]">
                 <Text fw={600} size="14px" lh="17.85px">Your Name</Text>
                 <input type="text" placeholder="Type here" className={classes.input}/>
               </Box>
-              <Box className="flex flex-col gap-[14px]">
+              <Box className="flex flex-col md:gap-[14px] gap-[12px]">
                 <Text fw={600} size="14px" lh="17.85px">Email</Text>
                 <input type="email" placeholder="Type here" className={classes.input}/>
               </Box>
-              <Box className="flex flex-col gap-[14px]">
+              <Box className="flex flex-col md:gap-[14px] gap-[12px]">
                 <Text fw={600} size="14px" lh="17.85px">What is the call about?</Text>
                 <input type="text" placeholder="Type here" className={classes.input}/>
               </Box>
-              <Box className="flex flex-col gap-[14px]">
+              <Box className="flex flex-col md:gap-[14px] gap-[12px]">
                 <Text fw={600} size="14px" lh="17.85px">Phone Number</Text>
-                <Flex align="center" gap="xs">
+                <Flex align="center" gap={8}>
                     <div className="relative">
                     {/* Clickable flag image to toggle dropdown */}
                     <div className="flex items-center rounded-[6px] border border-[#D4D4D8] bg-[#FFFFFF] h-[56px] px-[7px] cursor-pointer" onClick={toggleDropdown}>
-                        <Image src="/assets/pakflag.svg" alt="Pakistan Flag" className="w-4 h-4 mr-8" />
+                        <Image src="/assets/pakflag.svg" alt="Pakistan Flag" className="w-4 h-4 sm:mr-[30px] mr-[40px]" />
                         <IoIosArrowDown size={"14px"} className={`ml-2 z-50 absolute right-[7px] transition-transform transform ${dropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
                     </div>
                     {/* Dropdown menu */}
@@ -147,7 +148,7 @@ const DesktopEight = () => {
                 </Flex>
                 <Checkbox fw={400} size="14px" lh="17.85px" mt={2} mb={5} label="Receive booking details on phone" />
                 </Box>
-              <Box className="flex flex-col gap-[14px] font-[600] text-[14px] lh-[17.85px]">
+              <Box className="flex flex-col md:gap-[14px] gap-[12px] font-[600] text-[14px] lh-[17.85px]">
                 <Text fw={600} size="14px" lh="17.85px">Discount Code</Text>
                 <Flex gap="xs">
                   <input type="text" placeholder="Type here" className={classes.input}/>
@@ -161,24 +162,26 @@ const DesktopEight = () => {
                 bg={"#F4E2C3"}
                 className="border border-[#000000] border-b-[3px]"
               >
-                <Flex justify="space-between" align="center" >
-                  <Box className="flex  flex-col gap-[10px]">
+                <div className="flex justify-between items-center gap-[5px]">
+                  <div className="flex flex-col gap-[10px]">
                     <Text fw={700} size="16px" lh={"20.4px"}>Get Session recording</Text>
                     <Text fw={400} size="14px" lh={"17.85px"}>
                       $10 | Session recording to help you retain your learnings
                     </Text>
-                  </Box>
-                  <Button variant="filled" color="#000000" bd={"1px solid #000000"} bg={"#FFFFFF"} p={0} radius={"50px"} className={classes.buttonAdd}><img src="/assets/add-square.svg"/> Add</Button>
-                </Flex>
+                  </div>
+                  <div className={classes.buttonAdd}>
+                    <button><img src="/assets/add-square.svg"/> Add</button>
+                  </div>
+                </div>
               </Card>
             </div>
           </Card>
-          <Flex justify="space-between" gap={9} p={20} align="center">
-            <Text px={14} py={19} color="#1E1E1E" size="16px" fw={700} lh={"20.4px"} className="border border-[#000000] rounded-[50px]">
+          <div className="flex flex-wrap justify-center items-center gap-[9px] p-[20px]">
+            <Text px={14} py={19} color="#1E1E1E" size="16px" fw={700} lh={"20.4px"} className=" border border-[#000000] rounded-[50px]">
               $37/mo
             </Text>
-            <Button variant="filled" px={14} py={19} bg={"#FB923C"} size="16px" fw={700} lh={"20.4px"} color="#FFFFFF" w={"100%"} h={"100%"} bd={"1px solid #000000"} radius={50}>Confirm & Pay</Button>
-          </Flex>
+            <Button variant="filled" px={14} py={19} bg={"#FB923C"} size="16px" fw={700} lh={"20.4px"} color="#FFFFFF" h={"100%"} bd={"1px solid #000000"} radius={50} className="flex-grow">Confirm & Pay</Button>
+          </div>
         </Card>
       </div>
     </Box>

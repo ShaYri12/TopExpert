@@ -50,20 +50,20 @@ const Reviews = () => {
   return (
     <Box mt={40}>
   <Flex direction="column" mb={20} gap={10}>
-    <Title fw={700} size="20px" lh="25.5px">
+    <h3 className='md:text-[20px] text-[16px] font-[700] leading-[25.5px]'>
       Rating & Feedback
-    </Title>
+    </h3>
     <Flex gap={15} wrap="wrap">
       <div className="bg-[#FDF6EA] text-[14px] leading-[17.85px] border border-[#28231A] rounded-[30px] px-[13px] py-[10px]">
         <Group gap={4}>
-          <Text color="black" fw={700}>5.0</Text>
-          <Text color="black" fw={400}>(234 reviews)</Text>
+          <Text color="black" fz={"14px"} fw={700}>5.0</Text>
+          <Text color="black" fz={"14px"} fw={400}>(234 reviews)</Text>
         </Group>
       </div>
       <div className="bg-[#FDF6EA] text-[14px] leading-[17.85px] border border-[#28231A] rounded-[30px] px-[13px] py-[10px]">
         <Group gap={4}>
-          <Text color="black" fw={700}>18</Text>
-          <Text color="black" fw={400}>Testimonials</Text>
+          <Text color="black" fz={"14px"} fw={700}>18</Text>
+          <Text color="black" fz={"14px"} fw={400}>Testimonials</Text>
         </Group>
       </div>
     </Flex>
@@ -73,19 +73,20 @@ const Reviews = () => {
       <Card
         key={index}
         shadow="sm"
-        p="lg"
+        p={15}
         radius="md"
         withBorder
         className="flex flex-col flex-grow w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
       >
-        <Text size="14px" fw={400} lh="21px" mb={19}>
+        <Text fw={400} mb={19} className='md:text-[14px] text-[12px] md:leading-[21px] leading-[18px]'>
           {review.text}
         </Text>
         <Flex justify="space-between" align="center">
           <Group gap={9} align="center">
             <Avatar src={review.avatar} alt="User avatar" radius="xl" />
-            <div>
-              <Text fw={700}>{review.user}</Text>
+            <div className='flex flex-col gap-[6px]'>
+              <Text fw={700} className='md:text-[16px] text-[14px] md:leading-[20.4px] leading-[17.85px]'>{review.user}</Text>
+              <div className='flex gap-[6px]'>
               <Group gap={4}>
                 {[...Array(parseInt(review.rating))].map((_, starIndex) => (
                   <img
@@ -97,7 +98,8 @@ const Reviews = () => {
                   />
                 ))}
               </Group>
-              <Text ml={4}>{review.score}</Text>
+              <Text className='md:text-[14px] text-[12px] md:leading-[17.85px] leading-[15.3px]'>{review.score}</Text>
+              </div>
             </div>
           </Group>
           <img src="/assets/quote.svg" height="29px" width="29px" />

@@ -1,10 +1,7 @@
-
-
 .header {
   padding: 36px 100px;
   width: 100%;
   background-color: #fdf6ea;
-
 }
 
 .link {
@@ -46,4 +43,8 @@
 
 .card {
   box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cardSM {
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.75);
 }

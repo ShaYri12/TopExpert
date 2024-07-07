@@ -22,13 +22,21 @@
   padding: 0;
   gap: 10px;
   border-radius: 0 !important;
+  color: #475569 !important;
 }
 
 .activeBtn {
   border-bottom: 3px solid #F97316 !important; 
   border-radius: 0 !important;
+  color: #000000 !important;
 }
 
 .button2 span span {
   padding: 13px 30px 13px 30px;
+}
+
+@media screen and (max-width: 359px) {
+  .button2 span span {
+    padding: 10px 15px 10px 15px !important;
+  } 
 }

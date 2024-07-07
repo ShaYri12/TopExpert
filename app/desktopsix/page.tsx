@@ -11,8 +11,8 @@ const DesktopSix = () => {
   return (
     <>
     <Header/>
-    <div className="md:px-[100px] px-[20px] pb-[100px]">
-      <div className="mt-[-25px] md:block hidden">
+    <div className="lg:px-[100px] md:px-[50px] px-[20px] pb-[100px]">
+      <div className="mt-[-20px] md:block hidden">
         <Button variant="default" radius="40px" className={classes.button}>
           <IconArrowLeft width="15px" stroke="3px" /> Luna Data Scientist
         </Button>

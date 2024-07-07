@@ -3,11 +3,17 @@ import { Sidebar } from "../components/Sidebar";
 import DashboardTopbar from "../components/DashboardTopbar";
 import { Button } from "@mantine/core";
 import { FaArrowRight } from "react-icons/fa";
+import BottomMenu from "../components/DashboardBottomMenu";
 
 const DesktopSeven = () => {
   return (
     <div className="flex w-full bg-zinc-100">
+      <div>
       <Sidebar />
+      </div>
+      <div className="md:hidden block fixed bottom-0 w-full">
+        <BottomMenu/>
+      </div>
       <div className="w-full">
         <DashboardTopbar />
 

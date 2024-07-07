@@ -1,5 +1,4 @@
 .header {
-  padding: 36px 100px;
   width: 100%;
   background-color: #fdf6ea;
 }
@@ -8,13 +7,27 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
   text-decoration: none;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-weight: 400;
   font-size: 14px;
   line-height: 17.85px;
+
+  @media (max-width: 48em) {
+    height: 42px;
+    width: 100%;
+  }
+}
+
+.link2 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
 
   @media (max-width: 48em) {
     height: 42px;

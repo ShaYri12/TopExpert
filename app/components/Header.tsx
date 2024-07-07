@@ -16,7 +16,7 @@ export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <Group pos="relative" w="100%" >
+    <div className="relative w-full py-[30px] lg:px-[100px] md:px-[50px] px-[30px]" >
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href="/">
@@ -28,25 +28,16 @@ export function HeaderMegaMenu() {
             />
           </Link>
 
-          <Group
-            h="100%"
-            gap={"40px"}
-            visibleFrom="sm"
-            bg={"#FFFFFF"}
-            py="14px"
-            px="40px"
-            display={"flex"}
-            className="border-[0.5px] bg-white border-b-[2px] border-[#000000] rounded-[26px]"
-          >
+          <div className={classes.linksBox}>
             {menuItems.map((item) => (
               <a key={item.label} href={item.href} className={classes.link}>
                 {item.label}
               </a>
             ))}
-          </Group>
+          </div>
 
-          <Group visibleFrom="sm" h="100%">
-            <Link href="/login">
+          <div className={classes.loginSignup}>
+            <Link href="/login" className={classes.login}>
               <Button
                 variant="default"
                 radius={"35px"}
@@ -60,7 +51,7 @@ export function HeaderMegaMenu() {
                 Sign up
               </Button>
             </Link>
-          </Group>
+          </div>
 
           <Burger opened={isOpen} onClick={toggle} hiddenFrom="sm" />
         </Group>
@@ -71,19 +62,19 @@ export function HeaderMegaMenu() {
         onClose={close}
         size="100%"
         padding="md"
-        title="Navigation"
+        title={<img height={"22px"} width={"120px"} src="/assets/logo.svg" alt="Navigation"/>}
         hiddenFrom="sm"
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          <Group gap="md" pb="xl" px="md">
+          <Group gap="20px" pb="xl" px="md">
             {menuItems.map((item) => (
-              <a key={item.label} href={item.href} className={classes.link}>
+              <a key={item.label} href={item.href} className={classes.link2}>
                 {item.label}
               </a>
             ))}
 
-            <Group justify="center" className="flex flex-col">
+            <div className="flex flex-col justify-center gap-[20px]">
               <Button
                 variant="default"
                 radius={"35px"}
@@ -94,10 +85,10 @@ export function HeaderMegaMenu() {
               <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
                 Sign up
               </Button>
-            </Group>
+            </div>
           </Group>
         </ScrollArea>
       </Drawer>
-    </Group>
+    </div>
   );
 }

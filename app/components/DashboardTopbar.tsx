@@ -5,7 +5,7 @@ import classes from "../components/HeaderMegaMenu.module.css";
 const DashboardTopbar = () => {
   return (
     <div>
-      <div className="bg-white p-5 flex justify-between items-center w-full ">
+      <div className="bg-white p-5 hidden md:flex justify-between items-center w-full ">
         <div className="space-y-[7px]">
           <p className="text-[14px]">Saturday, November 18</p>
           <p className="text-[20px] font-[700]">Good afternoon, Usman</p>

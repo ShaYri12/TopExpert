@@ -36,7 +36,7 @@ const DesktopSeven: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 py-5 gap-5">
+          <div className="grid md:grid-cols-3 py-5 gap-5">
             <Card
               imgSrc="/assets/PersonalInfo.svg"
               title="Personal Info"

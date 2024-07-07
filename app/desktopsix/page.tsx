@@ -1,12 +1,16 @@
 import React from 'react';
-import { Button, Card } from '@mantine/core';
-import { IconArrowLeft, IconMail, IconBrandFacebook, IconBrandInstagram, IconBrandTiktok, IconArrowRight } from '@tabler/icons-react';
+import { Button} from '@mantine/core';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 import Seller from './Seller';
 import Reviews from './Reviews'
 import classes from './DesktopSix.module.css'
+import { FooterCentered as Footer } from "../components/Footer";
+import { HeaderMegaMenu as Header } from "../components/Header";
 
 const DesktopSix = () => {
   return (
+    <>
+    <Header/>
     <div className="md:px-[100px] px-[20px] pb-[100px]">
       <div className="mt-[-25px] md:block hidden">
         <Button variant="default" radius="40px" className={classes.button}>
@@ -61,6 +65,8 @@ const DesktopSix = () => {
       <Reviews />
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

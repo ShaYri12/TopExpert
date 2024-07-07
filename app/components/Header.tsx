@@ -62,19 +62,19 @@ export function HeaderMegaMenu() {
         onClose={close}
         size="100%"
         padding="md"
-        title="Navigation"
+        title={<img height={"22px"} width={"120px"} src="/assets/logo.svg" alt="Navigation"/>}
         hiddenFrom="sm"
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          <Group gap="md" pb="xl" px="md">
+          <Group gap="20px" pb="xl" px="md">
             {menuItems.map((item) => (
-              <a key={item.label} href={item.href} className={classes.link}>
+              <a key={item.label} href={item.href} className={classes.link2}>
                 {item.label}
               </a>
             ))}
 
-            <Group justify="center" className="flex flex-col">
+            <div className="flex flex-col justify-center gap-[20px]">
               <Button
                 variant="default"
                 radius={"35px"}
@@ -85,7 +85,7 @@ export function HeaderMegaMenu() {
               <Button radius={"35px"} bg={"#FB923C"} className={classes.button}>
                 Sign up
               </Button>
-            </Group>
+            </div>
           </Group>
         </ScrollArea>
       </Drawer>

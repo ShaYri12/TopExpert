@@ -1,5 +1,4 @@
 .header {
-  padding: 36px 100px;
   width: 100%;
   background-color: #fdf6ea;
 }
@@ -8,8 +7,6 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
   text-decoration: none;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-weight: 400;
@@ -47,4 +44,50 @@
 
 .cardSM {
   box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* "h-full flex gap-[10px]" */
+.loginSignup{
+  display: flex;
+  gap: 10px;
+  height: 100%;
+} 
+
+@media screen and (max-width: 768px) {
+  .loginSignup{
+    display: none !important;
+  } 
+}
+
+@media screen and (max-width: 1090px) {
+  .login{
+    display: none !important;
+  } 
+}
+
+.linksBox{
+  display: flex;
+  padding: 14px 40px;
+  background: #ffffff;
+  gap: 40px;
+  height: 100%;
+  border: 0.5px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-radius: 26px;
+} 
+
+
+
+@media screen and (max-width: 867px) {
+  .linksBox{
+    padding: 14px 20px;
+    background: #ffffff;
+    gap: 20px;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .linksBox{
+    display: none;
+  } 
 }

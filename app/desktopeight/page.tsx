@@ -1,17 +1,17 @@
 'use client'
 import React, { useState } from "react";
+import { FooterCentered as Footer } from "../components/Footer";
+import { HeaderMegaMenu as Header } from "../components/Header";
 import {
   Box,
   Card,
   Button,
   Group,
   Text,
-  Title,
   Avatar,
   Checkbox,
   Flex,
   Image,
-  Center,
 } from "@mantine/core";
 import classes from "./DesktopEight.module.css";
 import { IconArrowLeft} from "@tabler/icons-react";
@@ -31,6 +31,8 @@ const DesktopEight = () => {
     };
     
   return (
+    <>
+    <Header/>
     <Box mb="60px" mt="30px" px={20}>
       <div className="shadow-custom-black max-w-lg mx-auto">
         <Card
@@ -185,6 +187,8 @@ const DesktopEight = () => {
         </Card>
       </div>
     </Box>
+    <Footer/>
+    </>
   );
 };
 

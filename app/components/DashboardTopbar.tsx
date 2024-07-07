@@ -16,7 +16,13 @@ const DashboardTopbar = () => {
             radius="35px"
             className="h-full outline-none rounded-full border border-black "
             leftSection={<img src="/assets/search-normal.svg" alt="" />}
-            rightSection={<img src="/assets/search.svg" alt="" />}
+            rightSection={
+              <img
+                src="/assets/search.svg"
+                alt=""
+                className="mr-3 cursor-pointer"
+              />
+            }
           />
 
           <Button

@@ -16,7 +16,7 @@ export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <div className="relative w-full py-[30px] lg:px-[100px] md:px-[50px] px-[30px]" >
+    <div className="relative w-full py-[30px] lg:px-[100px] md:px-[50px] px-3" >
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href="/">
@@ -28,7 +28,7 @@ export function HeaderMegaMenu() {
             />
           </Link>
 
-          <div className='flex items-center gap-10 border-borderCustom4 border-[#1E1E1E] bg-white px-10 py-3.5 rounded-[26px]'>
+          <div className='hidden md:flex items-center gap-10 border-borderCustom4 border-[#1E1E1E] bg-white px-10 py-3.5 rounded-[26px]'>
             {menuItems.map((item) => (
               <a key={item.label} href={item.href} className='text-[14px] leading-[17.85px] font-medium'>
                 {item.label}
@@ -36,7 +36,7 @@ export function HeaderMegaMenu() {
             ))}
           </div>
 
-          <div className='flex items-center gap-2.5'>
+          <div className='hidden md:flex items-center gap-2.5'>
             <Link href="/login" className={classes.login}>
               <Button
                 variant="default"

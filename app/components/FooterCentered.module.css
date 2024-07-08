@@ -8,18 +8,11 @@
 
 .inner {
   width: 100%;
-  /* background: red; */
   display: flex;
-  justify-content: space-between;
   align-items: start;
-  padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+  justify-content: space-between;
 }
 
-@media (max-width: 48em) {
-  .inner {
-    flex-direction: column;
-  }
-}
 .links {
   background-color: #ffffff1a;
   height: 50px;
@@ -36,4 +29,22 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17.85px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inner {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .links {
+    height: 50px;
+    padding: 15px 20px;
+    gap: 25px !important;
+  }
 }

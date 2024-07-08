@@ -10,7 +10,7 @@ import { HeaderMegaMenu as Header } from "../components/Header";
 const DesktopSix = () => {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
     <div className="lg:px-[100px] md:px-[50px] px-[20px] pb-[100px]">
       <div className="mt-[-20px] md:block hidden">
         <Button variant="default" radius="40px" className={classes.button}>
@@ -19,11 +19,11 @@ const DesktopSix = () => {
       </div> 
       <Seller />
       <div className="shadow-custom-black border border-[#000000] bg-[#FFFCF8] mt-[21px] py-[16px] px-[19px]">
-        <div className="md:hidden block sm:pb-[24px] pb-[10px] flex items-center justify-between gap-[8px] flex-wrap">
+        <div className="md:hidden sm:pb-[24px] pb-[10px] flex items-center justify-between gap-[8px] flex-wrap">
           <Button variant="default" radius="40px" className={classes.button}>
             <IconArrowLeft width="15px" stroke="3px" /> Luna Data Scientist
           </Button>
-          <div className="md:hidden block  flex items-center bg-[#FDF6EA] p-[10px] border border-[#000000] rounded-[36px] ">
+          <div className="md:hidden flex items-center bg-[#FDF6EA] p-[10px] border border-[#000000] rounded-[36px] ">
             <div className='flex items-center justify-center gap-[6px] text-[14px] font-[600] leading-[17.85px]'>
               <img height={"15px"} src="/assets/star2.svg" /> 5/5 <span className='font-[400]'>(5) </span>
             </div>
@@ -56,7 +56,7 @@ const DesktopSix = () => {
                       <p className="text-[14px] font-[400] leading-[17.85px]">Video Meeting</p>
                     </div>
                   </div>
-                  <Button variant="default" bg={"#FDF6EA"} radius="30px" bd={"1px solid #000000"} className='flex gap-[4px] font-[700] text-[14px] leading-[17.85px] items-center justify-center py-[7px] px-[10px] gap-[4px]'>$55 <IconArrowRight width="15px" stroke="3px" /></Button>
+                  <Button variant="default" bg={"#FDF6EA"} radius="30px" bd={"1px solid #000000"} className='flex gap-[4px] font-[700] text-[14px] leading-[17.85px] items-center justify-center py-[7px] px-[10px]'>$55 <IconArrowRight width="15px" stroke="3px" /></Button>
                 </div>
               </div>
             </div>

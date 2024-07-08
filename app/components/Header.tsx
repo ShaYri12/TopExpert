@@ -28,15 +28,15 @@ export function HeaderMegaMenu() {
             />
           </Link>
 
-          <div className={classes.linksBox}>
+          <div className='flex items-center gap-10 border-borderCustom4 border-[#1E1E1E] bg-white px-10 py-3.5 rounded-[26px]'>
             {menuItems.map((item) => (
-              <a key={item.label} href={item.href} className={classes.link}>
+              <a key={item.label} href={item.href} className='text-[14px] leading-[17.85px] font-medium'>
                 {item.label}
               </a>
             ))}
           </div>
 
-          <div className={classes.loginSignup}>
+          <div className='flex items-center gap-2.5'>
             <Link href="/login" className={classes.login}>
               <Button
                 variant="default"

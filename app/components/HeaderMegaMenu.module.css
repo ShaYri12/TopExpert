@@ -73,6 +73,17 @@
   font-size: 14px !important;
   line-height: 17.85px !important;
 }
+@media (max-width: 660px) {
+  .button {
+    border: 1px solid #1e1e1e !important;
+    border-bottom: 3px solid #1e1e1e !important;
+    padding: 0 15px !important;
+    height: 34px !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    line-height: 14.85px !important;
+  }
+}
 
 .simpleButton {
   border: 1px solid #1e1e1e !important;
@@ -81,6 +92,16 @@
   font-weight: 700 !important;
   font-size: 14px !important;
   line-height: 17.85px !important;
+}
+@media (max-width: 660px) {
+  .simpleButton {
+    border: 1px solid #1e1e1e !important;
+    padding: 0 15px !important;
+    height: 34px !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    line-height: 14.85px !important;
+  }
 }
 
 .card {
@@ -91,48 +112,16 @@
   box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* "h-full flex gap-[10px]" */
-.loginSignup{
+.fullButton {
+  border: 1px solid #1e1e1e !important;
+  border-bottom: 3px solid #1e1e1e !important;
+  padding: 0 35px !important;
+  height: 44px !important;
   display: flex;
-  gap: 10px;
-  height: 100%;
-} 
-
-@media screen and (max-width: 768px) {
-  .loginSignup{
-    display: none !important;
-  } 
-}
-
-@media screen and (max-width: 1090px) {
-  .login{
-    display: none !important;
-  } 
-}
-
-.linksBox{
-  display: flex;
-  padding: 14px 40px;
-  background: #ffffff;
-  gap: 40px;
-  height: 100%;
-  border: 0.5px solid #000000;
-  border-bottom: 2px solid #000000;
-  border-radius: 26px;
-} 
-
-
-
-@media screen and (max-width: 867px) {
-  .linksBox{
-    padding: 14px 20px;
-    background: #ffffff;
-    gap: 20px;
-  } 
-}
-
-@media screen and (max-width: 768px) {
-  .linksBox{
-    display: none;
-  } 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 17.85px !important;
 }

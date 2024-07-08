@@ -50,7 +50,7 @@ const testimonials = [
 ];
 
 const Page = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const settings = {
     dots: true,
@@ -63,13 +63,13 @@ const Page = () => {
     <>
       <div
         className={`${
-          open === true ? "opacity-100" : "opacity-0"
-        } fixed inset-0 bg-black/30 duration-700 transition-opacity z-40`}
+          open === true ? "opacity-100 z-10" : "opacity-0"
+        } fixed inset-0 bg-black/30 duration-700 transition-opacity `}
       ></div>
 
       <div
-        className={`px-[6%] flex gap-[5%] py-9 ${
-          open === true ? "relative z-20" : ""
+        className={`px-[6%] flex gap-[5%]  py-9 ${
+          open === true ? "relative" : "z-20"
         }`}
       >
         <div

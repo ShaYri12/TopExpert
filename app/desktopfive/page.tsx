@@ -50,7 +50,7 @@ const testimonials = [
 ];
 
 const Page = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const settings = {
     dots: true,

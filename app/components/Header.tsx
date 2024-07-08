@@ -52,8 +52,8 @@ export function HeaderMegaMenu() {
               </Button>
             </Link>
           </div>
-
-          <Burger opened={isOpen} onClick={toggle} hiddenFrom="sm" />
+            
+          <Burger lineSize={2} opened={isOpen} onClick={toggle} bg={"#ffffff"} hiddenFrom="sm" className="rounded-[5px]" />
         </Group>
       </header>
 
@@ -67,7 +67,7 @@ export function HeaderMegaMenu() {
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          <Group gap="20px" pb="xl" px="md">
+          <Group gap="20px" px="20px">
             {menuItems.map((item) => (
               <a key={item.label} href={item.href} className={classes.link2}>
                 {item.label}

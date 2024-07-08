@@ -4,6 +4,7 @@ import DashboardTopbar from "../components/DashboardTopbar";
 import { Button } from "@mantine/core";
 import { FaArrowRight } from "react-icons/fa";
 import BottomMenu from "../components/DashboardBottomMenu";
+import { DashboardHeader as Header } from "../components/DashboardHeader";
 
 const DesktopSeven = () => {
   return (
@@ -17,6 +18,8 @@ const DesktopSeven = () => {
       <div className="w-full">
         <DashboardTopbar />
 
+        <Header />
+        
         <div className="m-4 flex flex-col md:flex-row gap-4">
           <div className="flex-1 bg-white rounded-[10px] p-[20px]">
             <div className="flex justify-between gap-4">

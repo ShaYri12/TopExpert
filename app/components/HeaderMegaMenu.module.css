@@ -3,6 +3,11 @@
   background-color: #fdf6ea;
 }
 
+.dashboardHeader{
+  width: 100%;
+  background-color: transparent;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -28,6 +33,30 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
+  border-top: 1px solid #0000001A;
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
+
+  @media (max-width: 48em) {
+    height: 42px;
+    width: 100%;
+  }
+}
+
+.dashboardLink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-top: 1px solid #0000001A;
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
 
   @media (max-width: 48em) {
     height: 42px;

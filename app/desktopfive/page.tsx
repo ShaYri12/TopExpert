@@ -117,12 +117,12 @@ const Page = () => {
   };
   return (
     <>
-    <div className="relative z-50">
+    <div className="relative z-10">
       <HeaderMegaMenu/>
     </div>
       <div
         className={`${
-          open === true ? "opacity-100 z-10" : "opacity-0"
+          open === true ? "opacity-100 z-50" : "opacity-0"
         } fixed inset-0 bg-black/30 duration-700 transition-opacity `}
       ></div>
 

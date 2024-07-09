@@ -21,8 +21,8 @@ const DesktopTwo = () => {
           <p className='text-[14px] md:text-[16px] leading-[20px] font-normal mb-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare venenatis semper. Quisque facilisis nisi ac viverra lobortis. Vivamus porta justo justo</p>
           <button className='border-borderCustom border-[#1E1E1E] w-[147px] h-[47px] rounded-[35px] bg-white text-[16px] font-bold leading-[20px]'>Get Started</button>
         </div>
-        <div>
-          <Image src='/assets/desktop2-hero.svg' alt='Image' width={523} height={653} />
+        <div className='md:h-[520px]'>
+          <Image src='/assets/desktop2-hero.svg' alt='Image' width={423} height={553} />
         </div>
       </div>
 

@@ -69,7 +69,7 @@ export function DashboardHeader() {
                 <Text>Logo.io/usman_zafar</Text>
             </div>
             <Flex justify={"space-between"} align={"center"} direction={"row"}>
-                <div className="flex justify-between items-center gap-[24px] rounded-[26px] border border-[0.5px] border-b-[2px] border-b-[#1E1E1E] border-[#1E1E1E] py-[8px] ps-[24px] pe-[8px]  ">
+                <div className="flex justify-between items-center gap-[24px] rounded-[26px]   border-[0.5px] border-b-[2px] border-b-[#1E1E1E] border-[#1E1E1E] py-[8px] ps-[24px] pe-[8px]  ">
                     <Text fw={400} size="14px" lh={"17.85px"}>Get more bookings</Text>
                     <span className="font-[600] text-[12px] text-[#ffffff] leading-[15.3px] px-[14px] py-[5px] bg-[#CD432D] gap-[8px] rounded-[8px]">New</span>
                 </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { HeaderMegaMenu } from "../components/Header";
 
 const Login: React.FC = () => {
   return (
-    <div className="bg-[#1A1E28] h-full w-full">
-
+    <>
+    <HeaderMegaMenu/>
+    <div className="sm:bg-[#1A1E28] h-full w-full">
     <div className="w-full h-full mx-auto max-w-[1440px]">
       <div className="flex w-full gap-[0.8rem] relative">
           <div className="absolute inset-0 h-[200px] bg-custom-gradient1 md:flex hidden"></div>
@@ -15,20 +17,20 @@ const Login: React.FC = () => {
           <Image src='assets/login4.svg' alt="Image" width={404} height={456} className="h-full" />
         </div>
 
-        <div className="flex flex-col  gap-2.5">
+        <div className="flex flex-col  gap-2.5 w-full">
             <Image src="/assets/login2.svg" alt="Image" width={609} height={301} className="md:flex hidden"/>
              <div className="bg-white h-full w-full py-10 px-3 flex items-center flex-col justify-center text-center">
                 <h2 className="capitalize max-w-[390px] font-black text-[34px] leading-[43px] text-[#1A1E28]">No task too big, no skill too <span className="font-medium">small</span>, Find your <span className="font-medium">perfect</span> pro</h2>
                 <h4 className="text-[#1A1E28] text-[16px] leading-[20px] capitalize font-normal mt-5">Let's <span className="font-bold border-b-2 border-[#F97316] pb-1">Hire</span> someone</h4>
 
                 <div className="mt-9 mb-16 flex flex-col gap-2.5">
-                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                  <button className="sm:min-w-[416px] min-w-[350px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
                     <Image src='/assets/login-google.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Google </span>
                   </button>
-                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                  <button className="sm:min-w-[416px] min-w-[350px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
                     <Image src='/assets/login-facebook.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Facebook </span>
                   </button>
-                  <button className="min-w-[416px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
+                  <button className="sm:min-w-[416px] min-w-[350px] h-[56px] rounded-[55px] border-borderCustom1 border-[#1E1E1E] text-[16px] leading-[20px] flex items-center gap-1 justify-center">
                     <Image src='/assets/login-sms.svg' alt='Google Icon' width={20} height={20} className="mr-2.5"/> Continue with  <span className="font-bold"> Email </span>
                   </button>
                 </div>
@@ -53,6 +55,7 @@ const Login: React.FC = () => {
     </div>
     
     </div>
+    </>
   );
 };
 

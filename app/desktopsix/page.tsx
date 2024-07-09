@@ -10,8 +10,8 @@ import { HeaderMegaMenu as Header } from "../components/Header";
 const DesktopSix = () => {
   return (
     <>
-    {/* <Header/> */}
-    <div className="lg:px-[100px] md:px-[50px] px-[20px] pb-[100px]">
+    <Header/>
+    <div className="2xl:px-[100px] md:px-[50px] px-[20px] mt-[10px] pb-[100px]">
       <div className="mt-[-20px] md:block hidden">
         <Button variant="default" radius="40px" className={classes.button}>
           <IconArrowLeft width="15px" stroke="3px" /> Luna Data Scientist

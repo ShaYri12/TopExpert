@@ -46,7 +46,7 @@ const EarnMoreOnLogoName: React.FC = () => {
   ];
 
   return (
-    <div className='w-full max-w-[1440px] mx-auto py-[100px] px-2 2xl:px-[100px] flex md:flex-row flex-col justify-between gap-[30px] items-center'>
+    <div className='w-full max-w-[1440px] mx-auto py-[100px]  2xl:px-[100px] md:px-[50px] px-4 flex md:flex-row flex-col justify-between gap-[30px] items-center'>
       <div>
         <Image src='/assets/CreatorsEarnMoreOnLogoName.svg' alt='Image' width={525} height={477} />
       </div>

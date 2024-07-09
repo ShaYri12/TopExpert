@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import classes from "@/app/components/HeaderMegaMenu.module.css";
 import {
   Group,
@@ -21,46 +22,104 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { RxCross2 } from "react-icons/rx";
+import { HeaderMegaMenu } from "../components/Header";
+import { FooterCentered } from "../components/Footer";
 
 const testimonials = [
   {
     name: "Asfandyar",
     feedback:
       "I really like the quick turnaround response I received. Matt seems really easy to talk to.",
-    image: "/assets/Avatar.png",
+    image: "/assets/avatar.svg",
   },
   {
     name: "Asfandyar",
     feedback:
       "I really like the quick turnaround response I received. Matt seems really easy to talk to.",
-    image: "/assets/Avatar.png",
+    image: "/assets/avatar.svg",
   },
   {
     name: "Asfandyar",
     feedback:
       "I really like the quick turnaround response I received. Matt seems really easy to talk to.",
-    image: "/assets/Avatar.png",
+    image: "/assets/avatar.svg",
   },
   {
     name: "Asfandyar",
     feedback:
       "I really like the quick turnaround response I received. Matt seems really easy to talk to.",
-    image: "/assets/Avatar.png",
+    image: "/assets/avatar.svg",
+  },
+  {
+    name: "Asfandyar",
+    feedback:
+      "I really like the quick turnaround response I received. Matt seems really easy to talk to.",
+    image: "/assets/avatar.svg",
+  },
+];
+
+const sliderData = [
+  {
+    title: "Design System Basics",
+    author: "Usman Zafar",
+    duration: "30 Mins",
+    type: "Video Meeting",
+    image: "/assets/arrow-meeting.svg",
+  },
+  {
+    title: "Design System basics",
+    author: "Usman Zafar",
+    duration: "45 Mins",
+    type: "Webinar",
+    image: "/assets/arrow-meeting.svg",
+  },
+  {
+    title: "UI/UX Fundamentals",
+    author: "John Smith",
+    duration: "60 Mins",
+    type: "Live Session",
+    image: "/assets/arrow-meeting.svg",
+  },
+  {
+    title: "Prototyping Tools",
+    author: "Alice Johnson",
+    duration: "25 Mins",
+    type: "Workshop",
+    image: "/assets/arrow-meeting.svg",
+  },
+  {
+    title: "Prototyping Tools",
+    author: "Alice Johnson",
+    duration: "25 Mins",
+    type: "Workshop",
+    image: "/assets/arrow-meeting.svg",
+  },
+  {
+    title: "Prototyping Tools",
+    author: "Alice Johnson",
+    duration: "25 Mins",
+    type: "Workshop",
+    image: "/assets/arrow-meeting.svg",
   },
 ];
 
 const Page = () => {
   const [open, setOpen] = useState(false);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? sliderData.length - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === sliderData.length - 1 ? 0 : prevIndex + 1));
   };
   return (
     <>
+    <div className="relative z-50">
+      <HeaderMegaMenu/>
+    </div>
       <div
         className={`${
           open === true ? "opacity-100 z-10" : "opacity-0"
@@ -68,19 +127,19 @@ const Page = () => {
       ></div>
 
       <div
-        className={`px-[6%] flex gap-[5%]  py-9 ${
+        className={`px-4 md:px-[40px] 2xl:px-[6%] flex gap-[20px] xl:gap-[5%]  py-9 ${
           open === true ? "relative" : "z-20"
         }`}
       >
         <div
-          className={`bg-white h-full border md:w-[60%] border-black p-[2%] ${classes.card}`}
+          className={`bg-[#FFFCF8] h-full border w-full  md:w-[60%] border-black p-5 ${classes.card}`}
         >
           <div className="flex justify-between items-center">
             <Button
               variant="default"
               bg="#FDF6EA"
               radius={"35px"}
-              className={classes.button}
+              // className=''
             >
               <MdArrowBack className="mr-2" size={20} /> Luna Data Scientist
             </Button>
@@ -88,7 +147,7 @@ const Page = () => {
               variant="default"
               radius={"35px"}
               bg="#FDF6EA"
-              className={`border-2 border-black ${classes.simpleButton}`}
+              // className={`border-2 border-black ${classes.simpleButton}`}
             >
               <img
                 src="/assets/star.svg"
@@ -98,8 +157,9 @@ const Page = () => {
             </Button>
           </div>
 
+          {/* Header Content */}
           <div className="my-8 space-y-[20px]">
-            <div className="flex justify-between items-end ">
+            <div className="flex justify-between items-end flex-wrap">
               <div className="rounded-full h-[93px] w-[93px] overflow-hidden">
                 <img
                   src="/assets/profile.jpeg"
@@ -107,13 +167,13 @@ const Page = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex gap-[6px]">
+              <div className="flex gap-[6px] mt-5 md:mt-0">
                 <Button
                   variant="default"
                   radius={"35px"}
                   bg="#FDF6EA"
                   color="#FFF"
-                  className={`${classes.simpleButton} `}
+                  // className={`${classes.simpleButton} `}
                   onClick={() => setOpen(true)}
                 >
                   <MdOutlineCalendarMonth
@@ -126,7 +186,8 @@ const Page = () => {
                   variant="default"
                   bg="#FB923C"
                   radius={"35px"}
-                  className={classes.button}
+                  color="#ffffff"
+                  // className={classes.button}
                   onClick={() => setOpen(true)}
                 >
                   <span className="line-through mr-1 md:mr-2">$49</span>
@@ -143,14 +204,16 @@ const Page = () => {
             </div>
           </div>
 
-          <Tabs defaultValue="gallery">
-            <Tabs.List>
+          {/* Tabs */}
+          <Tabs defaultValue="gallery" className="flex items-center">
+            <Tabs.List className="overflow-scroll" style={{display:'flex', gap:'1rem', flexWrap:'nowrap', overflow:'scroll'}}>
               <Tabs.Tab value="gallery">Description</Tabs.Tab>
               <Tabs.Tab value="about">About Seller</Tabs.Tab>
               <Tabs.Tab value="testimonials">Testimonials</Tabs.Tab>
               <Tabs.Tab value="offers">More Offers</Tabs.Tab>
             </Tabs.List>
 
+            {/* Gallery Tab Content */}
             <Tabs.Panel value="gallery">
               <div className="py-[5%] border-b border-zinc/200">
                 <h1 className="text-[16px] md:text-[20px] font-[700]">
@@ -200,6 +263,7 @@ const Page = () => {
               </div>
             </Tabs.Panel>
 
+            {/* About Tab Content */}
             <Tabs.Panel value="about">
               <div className="py-[5%] border-b border-zinc/200">
                 <h1 className="text-[16px] md:text-[20px] font-[700]">
@@ -218,142 +282,70 @@ const Page = () => {
               </div>
             </Tabs.Panel>
 
+            {/* Testimonials Tab Content */}
             <Tabs.Panel value="testimonials">
-              <div className="py-[5%] border-b border-zinc/200">
-                <div className="flex justify-between items-center pb-4">
-                  <h1 className="text-[16px] md:text-[20px] font-[700]">
-                    Testimonials
-                  </h1>
-
-                  <div className="flex gap-6 items-center">
-                    <FaArrowLeft size={25} className="cursor-pointer" />
-                    <FaArrowRight size={25} className="cursor-pointer" />
+              <div className=' h-[225px] mt-6 relative py-4 overflow-hidden'>
+                <div className='flex items-center justify-between'>
+                  <h1 className='text-[20px] leading-[25px] font-bold'>Testimonials</h1>
+                  <div className='flex items-center gap-2'>
+                    <button onClick={handlePrev}><GoArrowLeft className='w-[28px] h-[28px]' /></button>
+                    <button onClick={handleNext}><GoArrowRight className='w-[28px] h-[28px]' /></button>
                   </div>
                 </div>
 
-                <Slider {...settings}>
-                  <div>
-                    <Card
-                      padding="lg"
-                      component="div"
-                      className="w-[350px] mx-4 flex-shrink-0 border border-black"
-                    >
-                      <div className="flex items-center gap-2">
-                        <div className="w-[42px] h-[42px] rounded-full overflow-hidden">
-                          <img
-                            src={"/assets/Avatar.png"}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <h2 className="text-[14px] font-[700]">Asfandyar</h2>
-                      </div>
-                      <Text className="text-[13px] md:text-[16px] pb-[18px]">
-                        I really like the quick turnaround response I received.
-                        Matt seems really easy to talk to.
-                      </Text>
-                    </Card>
-                  </div>
-                </Slider>
-                <div className="slider-container">
+                <div className='mt-[17px] flex overflow-scroll relative' style={{ width: 'calc(100% + 15px)' }}>
                   <div
-                    className="overflow-x-auto"
-                    style={{
-                      scrollbarWidth: "none", // For Firefox
-                      msOverflowStyle: "none", // For Internet Explorer and Edge
-                    }}
+                    className='flex gap-x-4 transition-transform duration-500'
+                    style={{ transform: `translateX(-${(currentIndex * (262 + 16)) - (currentIndex === 0 ? 0 : 131)}px)` }}
                   >
-                    <div className="flex flex-nowrap">
-                      {testimonials.map((testimonial, index) => (
-                        <Card
-                          key={index}
-                          padding="xl"
-                          component="div"
-                          className="w-[250px] mx-2 flex-shrink-0 border border-black"
-                        >
-                          <div className="flex items-center gap-2">
-                            <div className="w-[42px] h-[42px] rounded-full overflow-hidden">
-                              <img
-                                src={testimonial.image}
-                                alt=""
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                            <h2 className="text-[14px] font-[700]">
-                              {testimonial.name}
-                            </h2>
-                          </div>
-                          <Text className="text-[13px] md:text-[16px] pb-[18px]">
-                            {testimonial.feedback}
-                          </Text>
-                        </Card>
-                      ))}
-                    </div>
+                    {testimonials.map((item, index) => (
+                      <div
+                        key={index}
+                        className={`min-w-[262px] h-[145px] bg-white border-borderCustom1 border-[#E2E8F0] p-4 rounded ${index === sliderData.length - 1 && currentIndex === sliderData.length - 1 ? 'hidden md:block' : ''}`}
+                      >
+                        <div className="flex items-center gap-2 mb-[15px]">
+                          <Image src={item.image} alt="Image"  className="w-[40px] h-[40px]"/>
+                          <h1 className='text-[14px] leading-[17px] font-bold'>{item.name}</h1>
+                        </div>
+                        <h4 className='text-[12px] leading-[18px] font-normal'>{item.feedback}</h4>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </Tabs.Panel>
 
-            <Tabs.Panel value="offers" className={`bg-[#ECCC7B]`}>
-              <div className="p-[5%] border-b border-zinc/200">
-                <div className="flex justify-between items-center pb-4">
-                  <h1 className="text-[16px] md:text-[20px] font-[700]">
-                    More Offerings
-                  </h1>
-
-                  <div className="flex gap-6 items-center">
-                    <FaArrowLeft size={25} className="cursor-pointer" />
-                    <FaArrowRight size={25} className="cursor-pointer" />
+            {/* Offers Tab Content */}
+            <Tabs.Panel value="offers">
+              <div className='bg-[#ECCC7B] h-[225px] shadow-custom1 mt-6 relative py-4 overflow-hidden'>
+                <div className='flex items-center justify-between px-5'>
+                  <h1 className='text-[20px] leading-[25px] font-bold'>More Offerings</h1>
+                  <div className='flex items-center gap-2'>
+                    <button onClick={handlePrev}><GoArrowLeft className='w-[28px] h-[28px]' /></button>
+                    <button onClick={handleNext}><GoArrowRight className='w-[28px] h-[28px]' /></button>
                   </div>
                 </div>
 
-                <div
-                  className="overflow-x-auto"
-                  style={{
-                    scrollbarWidth: "none", // For Firefox
-                    msOverflowStyle: "none", // For Internet Explorer and Edge
-                  }}
-                >
-                  <div className="flex flex-nowrap">
-                    {testimonials.map((testimonial, index) => (
-                      <Card
+                <div className='mt-[17px] flex overflow-scroll pl-5 relative' style={{ width: 'calc(100% + 15px)' }}>
+                  <div
+                    className='flex gap-x-4 transition-transform duration-500'
+                    style={{ transform: `translateX(-${(currentIndex * (262 + 16)) - (currentIndex === 0 ? 0 : 131)}px)` }}
+                  >
+                    {sliderData.map((item, index) => (
+                      <div
                         key={index}
-                        padding="sm"
-                        component="div"
-                        className="w-[260px] mx-2 flex-shrink-0 border border-black"
+                        className={`min-w-[262px] h-[145px] bg-[#FDF6EA] border-borderCustom1 border-black p-3 rounded ${index === sliderData.length - 1 && currentIndex === sliderData.length - 1 ? 'hidden md:block' : ''}`}
                       >
-                        <div className="">
-                          <h2 className="text-[13px] md:text-[16px] font-[700]">
-                            Design System basics
-                          </h2>
-                          <p className="text-[14px] font-[400]">
-                            By Usman Zafar
-                          </p>
-
-                          <div className="space-x-2 py-4">
-                            <Button
-                              variant="default"
-                              radius={"35px"}
-                              className={"border border-black text-[12px]"}
-                            >
-                              30 mins
-                            </Button>
-                            <Button
-                              variant="default"
-                              radius={"35px"}
-                              className={"border border-black text-[12px]"}
-                            >
-                              Video Meeting
-                            </Button>
-                          </div>
-                          <div className="flex justify-end">
-                            <FiArrowUpRight
-                              size={50}
-                              className=" rounded-full p-3 text-white bg-orange-400"
-                            />
-                          </div>
+                        <h1 className='text-[16px] leading-[20px] font-bold mb-1.5'>{item.title}</h1>
+                        <h4 className='text-[14px] leading-[17.85px] font-normal'>By <span className='font-semibold'>{item.author}</span></h4>
+                        <div className='flex items-center gap-3 mt-3'>
+                          <button className='border border-[#1E1E1E] rounded-[50px] w-[65px] h-[28px] text-[12px] leading-[15.3px] font-normal'>{item.duration}</button>
+                          <button className='border border-[#1E1E1E] rounded-[50px] w-[101px] h-[28px] text-[12px] leading-[15.3px] font-normal'>{item.type}</button>
                         </div>
-                      </Card>
+                        <div className='flex items-end justify-end cursor-pointer'>
+                          <Image src={item.image} alt='Arrow' width={41} height={41} />
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -361,6 +353,7 @@ const Page = () => {
             </Tabs.Panel>
           </Tabs>
         </div>
+
 
         <div
           className={`bg-white max-h-[500px] hidden md:flex flex-col justify-between border w-[40%] border-black p-[2%] ${classes.card}`}
@@ -445,9 +438,10 @@ const Page = () => {
         </div>
       </div>
 
+      {/* Booking */}
       <div
         className={`${
-          open === true ? "bottom-0" : "bottom-[-1000px]"
+          open === true ? "bottom-0" : "bottom-[-100%]"
         } bg-white fixed w-full z-50 md:hidden flex flex-col duration-700 justify-between rounded-t-[30px] border border-black h-[70%] p-[7%]`}
       >
         <div className="flex justify-between w-full">
@@ -535,6 +529,9 @@ const Page = () => {
           </Button>
         </div>
       </div>
+
+      {/* Footer */}
+      <FooterCentered/>
     </>
   );
 };

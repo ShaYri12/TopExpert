@@ -46,13 +46,13 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className='pt-[85px] w-full max-w-[1440px] mx-auto flex md:flex-row flex-col md:gap-2 gap-10 justify-between'>
-      <div className='max-w-[533px] mx-3'>
+    <div className='pt-[85px] w-full max-w-[1440px]  2xl:px-[100px] md:px-[50px] px-4 mx-auto flex md:flex-row flex-col md:gap-2 gap-10 justify-between'>
+      <div className='max-w-[533px] '>
         <h4 className='text-[14px] leading-[17.85px] font-semibold'>Frequently asked Question</h4>
         <h1 className='text-[28px] leading-[38px] md:text-[45px] md:leading-[57px] font-normal py-[16px]'>Got <span className='font-black'>Questions?</span> We've Got <span className='font-black'>Answers!</span></h1>
         <p className='text-[14px] md:text-[16px] leading-[21px] md:leading-[24px] font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare venenatis semper. Quisque facilisis nisi ac viverra lobortis. </p>
       </div>
-      <div className='max-w-[620px] w-full px-3'>
+      <div className='max-w-[620px] w-full'>
         {faqItems.map((item, index) => (
           <FAQItem
             key={index}

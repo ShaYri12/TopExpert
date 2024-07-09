@@ -16,7 +16,7 @@ export function HeaderMegaMenu() {
   const [isOpen, { toggle, close }] = useDisclosure();
 
   return (
-    <div className="relative w-full py-[30px] lg:px-[100px] md:px-[50px] px-[30px]" >
+    <div className="relative w-full py-[30px] 2xl:px-[100px] md:px-[50px] px-4" >
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href="/">

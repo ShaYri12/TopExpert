@@ -29,11 +29,10 @@ input:focus {
   outline: none;
 }
  
-
- 
 .overflow-scroll::-webkit-scrollbar {
   display: none; /* Hide the scrollbar for WebKit (Safari, Chrome, etc.) */
 }
+ 
 
 .top-rated-bg{
   background-image: url(/assets/top-rated-bg.svg);

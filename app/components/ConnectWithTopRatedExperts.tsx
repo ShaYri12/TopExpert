@@ -6,7 +6,7 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 
 const ConnectWithTopRatedExperts = () => {
   return (
-    <div className='max-w-[1440px] mx-auto pt-[50px] md:pt-[122px] px-2 2xl:px-[100px]'>
+    <div className='max-w-[1440px] mx-auto pt-[50px] md:pt-[122px] 2xl:px-[100px] md:px-[50px] px-4'>
         {/* Connect with top-rated experts in various fields */}
         <div className='flex items-center md:flex-row flex-col justify-between px-2 gap-10 mb-[50px] md:mb-0'>
           <div className='max-w-[553px]'>

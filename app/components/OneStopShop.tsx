@@ -3,7 +3,7 @@ import React from 'react';
 
 const OneStopShop = () => {
   return (
-    <div className='bg-white py-[78px] px-3 2xl:px-[100px]'>
+    <div className='bg-white py-[78px] 2xl:px-[100px] md:px-[50px] px-4'>
       <div className='max-w-[1400px] mx-auto flex items-center lg:flex-row flex-col justify-between gap-5'>
         <div className='pt-[50px]'>
           <h1 className='text-[28px] leading-[40px] md:text-[45px] md:leading-[57px] max-w-[422px] font-normal capitalize'>

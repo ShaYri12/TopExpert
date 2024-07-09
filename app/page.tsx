@@ -10,15 +10,14 @@ import EarnMoreOnLogoName from './components/EarnMoreOnLogoName'
 import OneStopShop from './components/OneStopShop'
 import ConnectWithTopRatedExperts from './components/ConnectWithTopRatedExperts'
 import { FooterCentered } from './components/Footer'
-
-
-
-
+import { HeaderMegaMenu } from './components/Header'
 
 const Home = () => {
   return (
+    <>
+    <HeaderMegaMenu/>
     <div className='w-full bg-[#FDF6EA]'>
-      <div className='flex lg:flex-row flex-col items-center lg:gap-3 gap-[50px] py-[64px] justify-between px-3 2xl:px-[100px]'>
+      <div className='flex lg:flex-row flex-col items-center lg:gap-3 gap-[50px] pb-[30px] md:py-[50px] justify-between 2xl:px-[100px] md:px-[50px] px-4'>
         <div className='max-w-[642px]'>
           <button className='border-2 border-[#1E1E1E] py-3 px-4 bg-transparent rounded-[26px] text-[14px] leading-[17.85px] font-semibold mb-6'>Instant access to top talent</button>
           <div className='flex items-center flex-wrap gap-2 text-[32px] leading-[40px] sm:text-[40px] sm:leading-[51px] md:text-[60px] md:leading-[75px] font-normal'><span className='font-bold'>Turn </span> your  
@@ -36,7 +35,7 @@ const Home = () => {
         </div>
         <div className='relative'>
           <Image src='/assets/Group 5.svg' alt='Image' width={452} height={437} className='w-[452px] h-[437px]' />
-          <Image src='/assets/Group 16.svg' alt='Logo' width={122} height={122} className='min-w-[122px] h-[122px] bg-contain z-20 absolute -bottom-16 left-1/2 md:left-0  transform -translate-x-1/2' />
+          <Image src='/assets/Group 16.svg' alt='Logo' width={122} height={122} className='min-w-[122px] h-[70px] md:h-[122px] bg-contain z-20 absolute bottom-0 md:-bottom-16 left-1/2 md:left-0  transform -translate-x-1/2' />
         </div>
 
       </div>
@@ -62,6 +61,7 @@ const Home = () => {
       {/* Footer */}
       <FooterCentered/>
     </div>
+    </>
   )
 }
 
